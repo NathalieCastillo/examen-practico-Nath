@@ -1,11 +1,15 @@
 import { Module } from '@nestjs/common';
 import { VehiclesModule } from './modules/vehicles/vehicles.module';
+import { BrandsModule } from './modules/brands/brands.module';
+import { ModelsModule } from './modules/models/models.module';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Module({
   imports: [
     VehiclesModule,
+    BrandsModule,
+    ModelsModule,
     ConfigModule.forRoot(),
 
     TypeOrmModule.forRoot({
